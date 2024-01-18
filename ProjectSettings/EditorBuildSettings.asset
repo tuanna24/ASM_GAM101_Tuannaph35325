@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuMaps2.unity
     guid: 72572b7b5e1b61c4f98590acfb495615
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: 06dedff08f99a404cb0c7b2a63c8438a
   m_configObjects: {}

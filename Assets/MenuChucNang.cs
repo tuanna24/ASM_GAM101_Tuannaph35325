@@ -7,7 +7,7 @@ public class MenuChucNang : MonoBehaviour
 {
     public void StarGame()
     {
-        SceneManager.LoadScene(1); // nhap man scene muon chuyen vao
+        SceneManager.LoadScene(1);
     }
     public void ExitGame ()
     {

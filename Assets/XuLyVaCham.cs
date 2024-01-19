@@ -15,13 +15,13 @@ public class XuLyVaCham : MonoBehaviour
     public GameOver gameOver;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider2D)
@@ -35,12 +35,12 @@ public class XuLyVaCham : MonoBehaviour
         if (collider2D.CompareTag("Bunny") || collider2D.CompareTag("Dog"))
         {
             Heart.Mau--;
-            if(Heart.Mau <= 0)
+            if (Heart.Mau <= 0)
             {
                 SceneManager.LoadScene(3);
             }
         }
-         if (collider2D.CompareTag("Cherry"))
+        if (collider2D.CompareTag("Cherry"))
         {
             Cherry++;
             CherryText.SetText(Cherry.ToString());

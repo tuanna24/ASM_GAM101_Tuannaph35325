@@ -690,7 +690,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ch\u01A1i L\u1EA1i M\xE0n 1"
+  m_Text: Play Again
 --- !u!222 &778714593
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xE0n 2"
+  m_Text: Next Screen
 --- !u!222 &806962269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1086,7 +1086,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Quay V\u1EC1 Menu"
+  m_Text: Back To Menu
 --- !u!222 &1613230782
 CanvasRenderer:
   m_ObjectHideFlags: 0

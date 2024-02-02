@@ -16,6 +16,11 @@ public class diChuyenPlayer : MonoBehaviour
     public int maxJumpCount = 2;
     public float jumpForce = 10f;
 
+    public Transform gunTip;
+    public GameObject bullets;
+    float fireRate = 0.5f;
+    float nextFire = 0;
+
     void Start()
     {
 
@@ -54,6 +59,25 @@ public class diChuyenPlayer : MonoBehaviour
             anim.SetBool("Nhay", false);
             jumpCount = 0;
         }
-
+        if (Input.GetAxisRaw("Fire1") > 0)
+        {
+            fireBullet();
+        }
     }
+    void fireBullet()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            if (isFacingRight)
+            {
+                Instantiate(bullets, gunTip.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else if (!isFacingRight)
+            {
+                Instantiate(bullets, gunTip.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+        }
+    }
+
 }

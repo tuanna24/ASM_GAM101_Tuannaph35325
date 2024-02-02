@@ -9,6 +9,11 @@ TagManager:
   - Cherry
   - Bunny
   - Dog
+  - House
+  - BunnyDie
+  - DogDie
+  - Bullets
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -16,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Bullets
   - 
   - 
   - 

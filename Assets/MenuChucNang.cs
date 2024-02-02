@@ -8,6 +8,7 @@ public class MenuChucNang : MonoBehaviour
     public void StarGame()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
     }
     public void ExitGame ()
     {
@@ -20,10 +21,12 @@ public class MenuChucNang : MonoBehaviour
     public void ChoiMan2 ()
     {
         SceneManager.LoadScene(2);
+        Time.timeScale = 1f;
     }
     public void VeMenu () 
     {
         SceneManager.LoadScene (0);
+        Time.timeScale = 1f;
     }
     public void QuayLaiMan2 () 
     {

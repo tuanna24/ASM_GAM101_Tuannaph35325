@@ -4,24 +4,50 @@ using System.Collections;
 
 public class NextMaps : MonoBehaviour
 {
-    public string sceneToLoad; // Tên của Scene muốn chuyển đến
-    public float delayBeforeLoad = 2f; // Độ trễ trước khi chuyển Scene
+    public string sceneToLoad;
+    public float delayBeforeLoad = 2f;
+    public GameObject winPanel;
+    public GameObject pauseMenu;
+    public AudioSource audioGame;
+    public AudioSource audioWin;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Kiểm tra nếu người chơi chạm vào
-            StartCoroutine(LoadNextSceneWithDelay());
+            ShowWinPanel();
+            Time.timeScale = 0;
+            audioGame.Stop();
+            audioWin.Play();
         }
     }
 
     private IEnumerator LoadNextSceneWithDelay()
     {
-        // Đợi độ trễ
         yield return new WaitForSeconds(delayBeforeLoad);
-
-        // Nạp Scene mới
         SceneManager.LoadScene(sceneToLoad);
+    }
+    private void ShowWinPanel()
+    {
+        winPanel.SetActive(true);
+    }
+    public void Start()
+    {
+        winPanel.SetActive(false);
+        audioGame.Play();
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pauseMenu.SetActive(true);
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
+    }
+    public void GotoMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

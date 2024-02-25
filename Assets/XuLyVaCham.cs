@@ -19,8 +19,6 @@ public class XuLyVaCham : MonoBehaviour
     public AudioSource audioCoin;
     public GameObject panelEndGame;
 
-    
-
     void Start()
     {
         audioGame.Play();
@@ -37,7 +35,7 @@ public class XuLyVaCham : MonoBehaviour
     {
         if (collider2D.CompareTag("Vang"))
         {
-            Vang++;
+            Vang = Vang + 5;
             audioCoin.Play();
             VangText.SetText(Vang.ToString());
             Destroy(collider2D.gameObject);
@@ -55,7 +53,7 @@ public class XuLyVaCham : MonoBehaviour
         }
         if (collider2D.CompareTag("Cherry"))
         {
-            Cherry++;
+            Cherry = Cherry + 5;
             audioCoin.Play();
             CherryText.SetText(Cherry.ToString());
             Destroy(collider2D.gameObject);

@@ -23,7 +23,7 @@ public class diChuyenPlayer : MonoBehaviour
 
     void Start()
     {
-
+        FPS();
     }
     float horizontalMove = 0f;
     void Update()
@@ -79,5 +79,8 @@ public class diChuyenPlayer : MonoBehaviour
             }
         }
     }
-
+    private void FPS()
+    {
+        Application.targetFrameRate = 30;
+    } 
 }

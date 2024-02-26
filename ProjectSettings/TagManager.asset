@@ -14,6 +14,7 @@ TagManager:
   - DogDie
   - Bullets
   - Boss
+  - CNV
   layers:
   - Default
   - TransparentFX

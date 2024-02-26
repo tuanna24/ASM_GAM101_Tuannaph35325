@@ -33,14 +33,14 @@ public class XuLyVaCham : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if (collider2D.CompareTag("Vang"))
+        if (collider2D.CompareTag("Vang") || collider2D.CompareTag("Cherry"))
         {
-            Vang = Vang + 5;
+            Vang++;
             audioCoin.Play();
             VangText.SetText(Vang.ToString());
             Destroy(collider2D.gameObject);
         }
-        if (collider2D.CompareTag("Boss"))
+        if (collider2D.CompareTag("CNV"))
         {
             Heart.Mau--;
             if (Heart.Mau <= 0)
@@ -51,23 +51,23 @@ public class XuLyVaCham : MonoBehaviour
             }
             audioDie.Play();
         }
-        if (collider2D.CompareTag("Cherry"))
-        {
-            Cherry = Cherry + 5;
-            audioCoin.Play();
-            CherryText.SetText(Cherry.ToString());
-            Destroy(collider2D.gameObject);
-        }
-        if (collider2D.gameObject.tag == "BunnyDie")
-        {
-            var name = collider2D.attachedRigidbody.name;
-            Destroy(GameObject.Find(name));
-        }
-        if (collider2D.gameObject.tag == "DogDie")
-        {
-            var name = collider2D.attachedRigidbody.name;
-            Destroy(GameObject.Find(name));
-        }
+        // if (collider2D.CompareTag("Cherry"))
+        // {
+        //     Cherry = Cherry + 5;
+        //     audioCoin.Play();
+        //     CherryText.SetText(Cherry.ToString());
+        //     Destroy(collider2D.gameObject);
+        // }
+        // if (collider2D.gameObject.tag == "BunnyDie")
+        // {
+        //     var name = collider2D.attachedRigidbody.name;
+        //     Destroy(GameObject.Find(name));
+        // }
+        // if (collider2D.gameObject.tag == "DogDie")
+        // {
+        //     var name = collider2D.attachedRigidbody.name;
+        //     Destroy(GameObject.Find(name));
+        // }
     }
     public void ReStarGame()
     {

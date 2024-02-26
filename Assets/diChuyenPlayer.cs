@@ -13,7 +13,7 @@ public class diChuyenPlayer : MonoBehaviour
 
     private bool isJumping = false;
     private int jumpCount = 0;
-    public int maxJumpCount = 2;
+    public int maxJumpCount = 2; // Thay đổi maxJumpCount thành 3 để cho phép nhảy 3 lần
     public float jumpForce = 10f;
 
     public Transform gunTip;
